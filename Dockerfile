@@ -4,8 +4,8 @@ FROM node:16.17.0-alpine as builder
 WORKDIR /app
 
 # Copy package.json and yarn.lock first to leverage Docker cache
-COPY ./package.json .
-COPY ./yarn.lock .
+COPY package.json .
+COPY yarn.lock .
 
 # Install dependencies
 RUN yarn install
